@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp2/bloc/theme_bloc/theme_controller.dart';
 import 'package:movieapp2/repositories/movie_repository.dart';
+import 'package:movieapp2/screens/login_signup_screen/login_signup_screen.dart';
 import 'package:movieapp2/style/custom_theme.dart';
 
 import 'screens/main_screen.dart';
@@ -25,10 +26,14 @@ class App extends StatelessWidget {
           theme: CustomTheme.lightTheme,
           darkTheme: CustomTheme.darkTheme,
           themeMode: themeController.themeMode,
-          home: MainScreen(
+          home: LoginSignupScreen(
             themeController: themeController,
             movieRepository: movieRepository,
           ),
+          // MainScreen(
+          //   themeController: themeController,
+          //   movieRepository: movieRepository,
+          // ),
         );
       },
     );

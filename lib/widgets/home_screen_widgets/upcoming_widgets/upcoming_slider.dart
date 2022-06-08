@@ -95,29 +95,6 @@ class UpComingView extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Positioned(
-                              top: 5.0,
-                              right: 10.0,
-                              child: SafeArea(
-                                child: Column(
-                                  children: [
-                                    const Text(
-                                      "Release date: ",
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 12.0,
-                                      ),
-                                    ),
-                                    Text(
-                                      movie.releaseDate,
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12.0,
-                                          color: Colors.grey),
-                                    ),
-                                  ],
-                                ),
-                              )),
                         ],
                       ))
                   .toList(),
@@ -127,7 +104,7 @@ class UpComingView extends StatelessWidget {
                 top: 10.0,
                 child: SafeArea(
                   child: Text(
-                    "Upcoming movies",
+                    "개봉예정 영화",
                     style: TextStyle(
                         fontFamily: 'NunitoBold',
                         fontSize: 18.0,

@@ -31,21 +31,21 @@ class _HomeScreenState extends State<HomeScreen> {
               themeController: widget.themeController),
           const Padding(
             padding: EdgeInsets.all(10.0),
-            child: Text("Now Playing"),
+            child: Text("현재 상영중인 영화"),
           ),
           NowPlayingWidget(
               movieRepository: widget.movieRepository,
               themeController: widget.themeController),
           const Padding(
             padding: EdgeInsets.all(10.0),
-            child: Text("Popular Movies"),
+            child: Text("인기있는 영화"),
           ),
           PopularMoviesWidget(
               movieRepository: widget.movieRepository,
               themeController: widget.themeController),
           const Padding(
             padding: EdgeInsets.all(10.0),
-            child: Text("AllTime Top Rated Movies"),
+            child: Text("역대 흥행 영화"),
           ),
           TopRatedMoviesWidget(
               movieRepository: widget.movieRepository,

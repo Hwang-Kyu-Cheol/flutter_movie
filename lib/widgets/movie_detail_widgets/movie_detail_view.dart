@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:movieapp2/bloc/movie_detail_bloc/movie_detail_cubit.dart';
 import 'package:movieapp2/bloc/theme_bloc/theme_controller.dart';
 import 'package:movieapp2/repositories/movie_repository.dart';
+import 'package:movieapp2/screens/chat_screen/chat_screen.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -173,7 +174,7 @@ class DetailView extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        "Release date: " +
+                                        "개봉 날짜: " +
                                             state.movie.releaseDate,
                                         style: const TextStyle(
                                             fontSize: 12.0,
@@ -266,7 +267,7 @@ class DetailView extends StatelessWidget {
                   const SizedBox(
                     height: 20.0,
                   ),
-                  Text("OVERVIEW",
+                  Text("개요",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14.0,
@@ -291,7 +292,7 @@ class DetailView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("CASTS",
+                  Text("캐스팅",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14.0,
@@ -315,7 +316,7 @@ class DetailView extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
-              child: Text("ABOUT MOVIE",
+              child: Text("기본 정보",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 14.0,
@@ -331,7 +332,7 @@ class DetailView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Status:",
+                      Text("상태:",
                           style: TextStyle(
                               fontSize: 14.0,
                               color: Colors.white.withOpacity(0.5))),
@@ -348,7 +349,7 @@ class DetailView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Budget:",
+                      Text("예산:",
                           style: TextStyle(
                               fontSize: 14.0,
                               color: Colors.white.withOpacity(0.5))),
@@ -365,7 +366,7 @@ class DetailView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Revenue:",
+                      Text("수익:",
                           style: TextStyle(
                               fontSize: 14.0,
                               color: Colors.white.withOpacity(0.5))),
@@ -390,7 +391,7 @@ class DetailView extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                    child: Text("SIMILAR MOVIES",
+                    child: Text("비슷한 영화",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 14.0,
@@ -416,6 +417,24 @@ class DetailView extends StatelessWidget {
             const SizedBox(
               height: 20.0,
             ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => ChatScreen(),
+                ));
+              },
+              child: Text(
+                '영화 채팅방 입장하기',
+                style: TextStyle(
+                  fontSize: 20
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.indigo,
+                onPrimary: Colors.white,
+                padding: EdgeInsets.all(20),
+              ),
+            )
           ],
         );
       default:

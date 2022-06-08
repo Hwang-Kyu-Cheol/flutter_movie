@@ -15,4 +15,9 @@ class CustomColors {
   static Color fourthColor = const Color(0xFF8FDCFF);
   static Color elementBack = const Color(0xfff1efef);
   static Color titleColor = const Color(0xFF061857);
+  static Color iconColor = const Color(0xFFB6C7D1);
+  static Color activeColor = const Color(0xFF09126C);
+  static Color textColor1 = const Color(0xFF222222);
+  static Color textColor2 = const Color(0xFF222222);
+  static Color backgroundColor = const Color(0xFF222222);
 }
